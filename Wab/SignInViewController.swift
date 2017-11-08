@@ -27,10 +27,13 @@ class SignInViewController: UIViewController {
         print(parameters)
         
         Alamofire.request("http://78.47.10.82/account/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .responseString { response in
+            .responseJSON { response in
                 switch response.result {
-                case .success:
-                    print(response)
+                case .success(let value):
+                    let json = value as? [String: String]
+                    let token = json!["token"]
+                    KeychainService.savePassword(service: "wab", account: "token", data: token!)
+                    print(KeychainService.loadPassword(service: "wab", account: "token")!)
                     break
                 case .failure(let error):
                     print(error)

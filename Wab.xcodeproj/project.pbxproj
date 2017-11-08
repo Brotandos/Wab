@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10174BF787F961A06DFEC208 /* Pods_Wab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9160C9E69BD6C38AD0D154 /* Pods_Wab.framework */; };
 		401303581FAB17A5007495F1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401303571FAB17A5007495F1 /* SignInViewController.swift */; };
+		4061FA831FB3201E00785C51 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061FA821FB3201E00785C51 /* KeychainService.swift */; };
 		9AC287B21FA0887F0077E408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC287B11FA0887F0077E408 /* AppDelegate.swift */; };
 		9AC287B41FA0887F0077E408 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC287B31FA0887F0077E408 /* ViewController.swift */; };
 		9AC287B71FA0887F0077E408 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC287B51FA0887F0077E408 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		13F4EF5177DF1346968DF561 /* Pods-Wab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wab/Pods-Wab.debug.xcconfig"; sourceTree = "<group>"; };
 		3E9160C9E69BD6C38AD0D154 /* Pods_Wab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		401303571FAB17A5007495F1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		4061FA821FB3201E00785C51 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		9AC287AE1FA0887F0077E408 /* Wab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC287B11FA0887F0077E408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AC287B31FA0887F0077E408 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				9AC287BD1FA0887F0077E408 /* Info.plist */,
 				9AC287C31FA0AE060077E408 /* SignUpViewController.swift */,
 				401303571FAB17A5007495F1 /* SignInViewController.swift */,
+				4061FA821FB3201E00785C51 /* KeychainService.swift */,
 			);
 			path = Wab;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				401303581FAB17A5007495F1 /* SignInViewController.swift in Sources */,
 				9AC287C41FA0AE060077E408 /* SignUpViewController.swift in Sources */,
 				9AC287B41FA0887F0077E408 /* ViewController.swift in Sources */,
+				4061FA831FB3201E00785C51 /* KeychainService.swift in Sources */,
 				9AC287B21FA0887F0077E408 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
