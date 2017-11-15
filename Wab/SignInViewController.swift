@@ -18,10 +18,10 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func signInPressed(_ sender: Any) {
-        guard phoneField.text != "", pwdField.text != "" else { return }
+        //guard phoneField.text != "", pwdField.text != "" else { return }
         let parameters: Parameters = [
-            "phone": phoneField.text!,
-            "password": pwdField.text!
+            "phone": "7771111111",//phoneField.text!,
+            "password": "qwerty123"//pwdField.text!
         ]
         
         print(parameters)
@@ -34,6 +34,9 @@ class SignInViewController: UIViewController {
                     let token = json!["token"]
                     KeychainService.savePassword(service: "wab", account: "token", data: token!)
                     print(KeychainService.loadPassword(service: "wab", account: "token")!)
+                    
+                    let controller = self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController")
+                    self.present(controller!, animated: true, completion: nil)
                     break
                 case .failure(let error):
                     print(error)

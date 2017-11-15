@@ -10,6 +10,7 @@
 		10174BF787F961A06DFEC208 /* Pods_Wab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9160C9E69BD6C38AD0D154 /* Pods_Wab.framework */; };
 		401303581FAB17A5007495F1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401303571FAB17A5007495F1 /* SignInViewController.swift */; };
 		4061FA831FB3201E00785C51 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4061FA821FB3201E00785C51 /* KeychainService.swift */; };
+		86FC50C11FBC6172005F941F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FC50C01FBC6172005F941F /* ProfileViewController.swift */; };
 		9AC287B21FA0887F0077E408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC287B11FA0887F0077E408 /* AppDelegate.swift */; };
 		9AC287B41FA0887F0077E408 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC287B31FA0887F0077E408 /* ViewController.swift */; };
 		9AC287B71FA0887F0077E408 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AC287B51FA0887F0077E408 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		3E9160C9E69BD6C38AD0D154 /* Pods_Wab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		401303571FAB17A5007495F1 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4061FA821FB3201E00785C51 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		86FC50C01FBC6172005F941F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9AC287AE1FA0887F0077E408 /* Wab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC287B11FA0887F0077E408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AC287B31FA0887F0077E408 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				9AC287C31FA0AE060077E408 /* SignUpViewController.swift */,
 				401303571FAB17A5007495F1 /* SignInViewController.swift */,
 				4061FA821FB3201E00785C51 /* KeychainService.swift */,
+				86FC50C01FBC6172005F941F /* ProfileViewController.swift */,
 			);
 			path = Wab;
 			sourceTree = "<group>";
@@ -132,6 +135,7 @@
 				TargetAttributes = {
 					9AC287AD1FA0887F0077E408 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -209,10 +213,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Wab/Pods-Wab-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -226,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86FC50C11FBC6172005F941F /* ProfileViewController.swift in Sources */,
 				401303581FAB17A5007495F1 /* SignInViewController.swift in Sources */,
 				9AC287C41FA0AE060077E408 /* SignUpViewController.swift in Sources */,
 				9AC287B41FA0887F0077E408 /* ViewController.swift in Sources */,
@@ -368,11 +375,13 @@
 			baseConfigurationReference = 13F4EF5177DF1346968DF561 /* Pods-Wab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Wab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brotandos.Wab;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -383,6 +392,7 @@
 			baseConfigurationReference = BA167F7B69CC31C84486AB2A /* Pods-Wab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Wab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
